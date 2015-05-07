@@ -1,0 +1,32 @@
+{
+    "name": "agitation/contactform",
+    "type": "symfony-bundle",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.9",
+        "symfony/symfony": "2.3.*",
+        "agitation/api": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Agit\\ContactFormBundle\\": ""
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AGITsol GmbH",
+            "homepage": "http://www.agitsol.com/"
+        }
+    ],
+    "description": "Provides an API-based contact form for the Agitation framework.",
+    "keywords": [
+        "agit",
+        "agitation",
+        "tixys",
+        "user",
+        "authentication",
+        "authorisation",
+        "authorization"
+    ]
+}

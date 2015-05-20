@@ -20,7 +20,7 @@ class ContactForm extends AbstractEndpoint
 {
     /**
      * @Meta\Call\Call(request="Message",response="common.v1/Null")
-     * @Meta\Call\Security(capability="",allowCrossOrigin=true)
+     * @Meta\Call\Security(capability="",allowCrossOrigin=false)
      *
      * Send an e-mail to the website owner.
      */

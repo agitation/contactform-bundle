@@ -24,14 +24,14 @@ class ContactForm extends AbstractEndpoint
      *
      * Send an e-mail to the website owner.
      */
-    protected function sendEmail(AbstractObject $RequestObject)
+    protected function sendEmail(AbstractObject $requestObject)
     {
         $message = $this->getService('mailer')->createMessage()
-            ->setSubject($RequestObject->get('subject'))
-            ->setFrom([$this->getParameter('agit.email.noreply') => $RequestObject->get('name')])
-            ->setReplyTo([$RequestObject->get('email') => $RequestObject->get('name')])
+            ->setSubject($requestObject->get('subject'))
+            ->setFrom([$this->getParameter('agit.email.noreply') => $requestObject->get('name')])
+            ->setReplyTo([$requestObject->get('email') => $requestObject->get('name')])
             ->setTo([$this->getParameter('agit.email.contact')])
-            ->setBody($RequestObject->get('message'), 'text/plain');
+            ->setBody($requestObject->get('message'), 'text/plain');
 
         $this->getService('mailer')->send($message);
 

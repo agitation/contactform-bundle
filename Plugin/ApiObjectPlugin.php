@@ -1,7 +1,7 @@
 <?php
 /**
- * @package    agitation/api
- * @link       http://github.com/agitation/AgitApiBundle
+ * @package    agitation/contactform
+ * @link       http://github.com/agitation/AgitContactFormBundle
  * @author     Alex Günsche <http://www.agitsol.com/>
  * @copyright  2012-2015 AGITsol GmbH
  * @license    http://opensource.org/licenses/MIT

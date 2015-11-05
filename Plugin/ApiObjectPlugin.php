@@ -19,11 +19,11 @@ class ApiObjectPlugin extends AbstractApiObjectPlugin
 {
     protected function getSearchNamespace()
     {
-        return "Agit\ContactFormBundle\Api\Object";
+        return 'Agit\ContactFormBundle\Api\v1\Object';
     }
 
     protected function getApiNamespace()
     {
-        return "contactform.v1";
+        return 'contactform.v1';
     }
 }

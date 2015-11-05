@@ -19,11 +19,11 @@ class ApiEndpointPlugin extends AbstractApiEndpointPlugin
 {
     protected function getSearchNamespace()
     {
-        return "Agit\ContactFormBundle\Api\Endpoint";
+        return 'Agit\ContactFormBundle\Api\v1\Endpoint';
     }
 
     protected function getApiNamespace()
     {
-        return "contactform.v1";
+        return 'contactform.v1';
     }
 }

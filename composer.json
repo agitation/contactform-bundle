@@ -5,7 +5,9 @@
     "require": {
         "php": ">=5.4.9",
         "symfony/symfony": "2.3.*",
-        "agitation/api": "dev-master"
+        "agitation/pluggable": "dev-master",
+        "agitation/api": "dev-master",
+        "agitation/ui": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -24,9 +26,6 @@
         "agit",
         "agitation",
         "tixys",
-        "user",
-        "authentication",
-        "authorisation",
-        "authorization"
+        "contact form"
     ]
 }

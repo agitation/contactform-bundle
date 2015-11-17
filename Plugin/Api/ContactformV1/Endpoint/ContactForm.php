@@ -7,20 +7,21 @@
  * @license    http://opensource.org/licenses/MIT
  */
 
-namespace Agit\ContactFormBundle\Api\v1\Endpoint;
+namespace Agit\ContactFormBundle\Plugin\Api\ContactformV1\Endpoint;
 
-use Agit\ApiBundle\Api\Meta;
-use Agit\ApiBundle\Api\Endpoint\AbstractEndpoint;
-use Agit\ApiBundle\Api\Object\AbstractObject;
+use Agit\ApiBundle\Annotation\Endpoint;
+use Agit\ApiBundle\Annotation\Endpoint\EndpointClass;
+use Agit\ApiBundle\Common\AbstractEndpointClass;
+use Agit\ApiBundle\Common\AbstractObject;
 
 /**
- * This endpoint is used for testing purposes.
+ * @EndpointClass
  */
-class ContactForm extends AbstractEndpoint
+class ContactForm extends AbstractEndpointClass
 {
     /**
-     * @Meta\Call\Call(request="Message",response="common.v1/Null")
-     * @Meta\Call\Security(capability="",allowCrossOrigin=false)
+     * @Endpoint\Endpoint(request="Message",response="common.v1/Null")
+     * @Endpoint\Security(capability="",allowCrossOrigin=false)
      *
      * Send an e-mail to the website owner.
      */

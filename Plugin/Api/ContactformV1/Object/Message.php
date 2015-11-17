@@ -7,13 +7,16 @@
  * @license    http://opensource.org/licenses/MIT
  */
 
-namespace Agit\ContactFormBundle\Api\v1\Object;
+namespace Agit\ContactFormBundle\Plugin\Api\ContactformV1\Object;
 
-use Agit\ApiBundle\Api\Object\AbstractObject;
-use Agit\ApiBundle\Api\Meta\Property;
+use Agit\ApiBundle\Annotation\Object;
+use Agit\ApiBundle\Annotation\Property;
+use Agit\ApiBundle\Common\AbstractObject;
 
 /**
- * An e-mail message
+ * @Object\Object
+ *
+ * An e-mail message.
  */
 class Message extends AbstractObject
 {

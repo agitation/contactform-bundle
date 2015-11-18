@@ -13,6 +13,7 @@ use Agit\ApiBundle\Annotation\Endpoint;
 use Agit\ApiBundle\Annotation\Endpoint\EndpointClass;
 use Agit\ApiBundle\Common\AbstractEndpointClass;
 use Agit\ApiBundle\Common\AbstractObject;
+use Agit\PluggableBundle\Strategy\Depends;
 
 /**
  * @EndpointClass
@@ -21,20 +22,25 @@ class ContactForm extends AbstractEndpointClass
 {
     /**
      * @Endpoint\Endpoint(request="Message",response="common.v1/Null")
-     * @Endpoint\Security(capability="",allowCrossOrigin=false)
+     * @Endpoint\Security(capability="")
+     * @Depends({"mailer", "agit.contactform.settings"})
      *
      * Send an e-mail to the website owner.
      */
     protected function sendEmail(AbstractObject $requestObject)
     {
-        $message = $this->getService('mailer')->createMessage()
+        $mailer = $this->getService('mailer');
+        $noreplyAddr = $this->getService('agit.contactform.settings')->getNoReplyAddress();
+        $contactAddr = $this->getService('agit.contactform.settings')->getContactAddress();
+
+        $message = $mailer->createMessage()
             ->setSubject($requestObject->get('subject'))
-            ->setFrom([$this->getParameter('agit.email.noreply') => $requestObject->get('name')])
+            ->setFrom([$noreplyAddr => $requestObject->get('name')])
             ->setReplyTo([$requestObject->get('email') => $requestObject->get('name')])
-            ->setTo([$this->getParameter('agit.email.contact')])
+            ->setTo([$contactAddr])
             ->setBody($requestObject->get('message'), 'text/plain');
 
-        $this->getService('mailer')->send($message);
+        $mailer->send($message);
 
         return $this->createObject('common.v1/Null');
     }

@@ -1,0 +1,5 @@
+services:
+
+    agit.contactform.settings:
+        class: Agit\ContactFormBundle\Service\ContactformSettingService
+        arguments: [ %agit.email.contact%, %agit.email.noreply%, @?agit.settings ]

@@ -1,5 +1,5 @@
 {
-    "name": "agitation/contactform",
+    "name": "agitation/contactform-bundle",
     "type": "symfony-bundle",
     "minimum-stability": "dev",
     "require": {

@@ -5,8 +5,8 @@
     "require": {
         "php": ">=5.4.9",
         "symfony/symfony": "2.3.*",
-        "agitation/pluggable": "dev-master",
-        "agitation/api": "dev-master"
+        "agitation/pluggable-bundle": "dev-master",
+        "agitation/api-bundle": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -19,12 +19,5 @@
             "name": "AGITsol GmbH",
             "homepage": "http://www.agitsol.com/"
         }
-    ],
-    "description": "Provides an API-based contact form for the Agitation framework.",
-    "keywords": [
-        "agit",
-        "agitation",
-        "tixys",
-        "contact form"
     ]
 }
